@@ -3,7 +3,7 @@ document.getElementById('submit-btn').addEventListener('click', () => {
     const container = document.querySelector('.container');
     container.innerHTML = '<p class="loading">Generating your Research Wrapped...</p>';
 
-    fetch('http://127.0.0.1:5000/api/process', {
+    fetch('https://research-wrapped-backend.onrender.com/api/process', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ researcher_id: researcherId })

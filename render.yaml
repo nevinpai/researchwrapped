@@ -1,9 +1,19 @@
 services:
   - type: web
-    name: researchwrapped-api
+    name: research-wrapped-backend
     env: python
     plan: free
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
-    autoDeploy: true
+    buildCommand: "pip install -r backend/requirements.txt && python backend/download_nltk.py"
+    startCommand: "gunicorn main:app"
+    healthCheckPath: "/"
+    build:
+      - "cd backend"
 
+  - type: web
+    name: research-wrapped-frontend
+    env: static
+    region: oregon
+    plan: free
+    staticPublishPath: ./frontend
+    build:
+      - "cd frontend"

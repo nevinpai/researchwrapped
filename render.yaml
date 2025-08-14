@@ -12,8 +12,7 @@ services:
   - type: web
     name: research-wrapped-frontend
     env: static
-    region: oregon
     plan: free
-    staticPublishPath: ./frontend
+    staticPublishPath: ./docs
     build:
-      - "cd frontend"
+      - "cd docs"

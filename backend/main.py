@@ -3,9 +3,15 @@ from flask_cors import CORS
 import requests
 import re
 import nltk
+import os
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from collections import Counter
+
+# Set the NLTK data path
+nltk_data_dir = os.path.join(os.path.dirname(__file__), 'nltk_data')
+if os.path.exists(nltk_data_dir):
+    nltk.data.path.append(nltk_data_dir)
 
 app = Flask(__name__)
 CORS(app, origins=["https://nevinpai.github.io", "http://127.0.0.1:5500", "null"])

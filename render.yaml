@@ -3,16 +3,13 @@ services:
     name: research-wrapped-backend
     env: python
     plan: free
-    buildCommand: "pip install -r backend/requirements.txt && python backend/download_nltk.py"
+    workingDir: ./backend
+    buildCommand: "pip install -r requirements.txt && python download_nltk.py"
     startCommand: "gunicorn main:app"
     healthCheckPath: "/"
-    build:
-      - "cd backend"
 
   - type: web
     name: research-wrapped-frontend
     env: static
     plan: free
     staticPublishPath: ./docs
-    build:
-      - "cd docs"

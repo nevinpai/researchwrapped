@@ -136,14 +136,15 @@ body {
     margin-top: 1.5rem;
 }
 
-.card-footer .share-prompt {
-    font-weight: bold;
-    color: #000;
-}
-
 .card-footer a {
     color: #000;
     text-decoration: none;
+}
+
+.share-prompt {
+    font-weight: bold;
+    color: #000;
+    margin-top: 1rem;
 }
 
 /* Screenshot Guides */

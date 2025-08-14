@@ -67,7 +67,6 @@ function renderResultsCard(data) {
             </div>
         </div>
         <div class="card-footer">
-            <p class="share-prompt">Screenshot this card to share!</p>
             <a href="https://nevinpai.github.io/researchwrapped/" target="_blank">nevinpai.github.io/researchwrapped</a>
         </div>
         <div class="screenshot-guide bottom-left"></div>
@@ -83,4 +82,9 @@ function renderResultsCard(data) {
     card.querySelector('.stat-section.verbs').appendChild(createList(data.most_common_verbs));
 
     container.appendChild(card);
+
+    const sharePrompt = document.createElement('p');
+    sharePrompt.className = 'share-prompt';
+    sharePrompt.textContent = 'Screenshot this card to share!';
+    container.appendChild(sharePrompt);
 }

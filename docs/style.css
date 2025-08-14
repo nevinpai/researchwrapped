@@ -1,0 +1,80 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #111;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+  max-width: 840px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: -0.5px;
+  margin: 0 0 8px;
+}
+
+.tag {
+  color: #333;
+  margin-top: 0;
+}
+
+.form {
+  margin: 32px 0 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"], input[type="url"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #000;
+  background: #fff;
+  color: #111;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.backend { margin-top: 12px; }
+
+button {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
+}
+
+button:disabled { opacity: 0.5; cursor: default; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+ol { margin: 8px 0 0 18px; }
+
+.share { margin: 24px 0; }
+.share .card {
+  width: 100%;
+  border: 1px solid #111;
+}
+
+.share-controls { display: flex; gap: 12px; align-items: center; margin-top: 8px; }
+
+footer { color: #555; margin-top: 48px; font-size: 14px; }
+
+.hidden { display: none; }
+
